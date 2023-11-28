@@ -4,3 +4,7 @@
 # production
 /build
 /dist
+
+# local
+*.local.yaml
+*.d.ts
