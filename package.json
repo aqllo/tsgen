@@ -7,7 +7,6 @@
   "bin": {
     "tsgen": "./bin/tsgen.js"
   },
-  "private": "false",
   "keywords": [
     "aqllo",
     "typescript",
