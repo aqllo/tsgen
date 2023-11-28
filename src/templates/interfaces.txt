@@ -1,0 +1,15 @@
+export interface I {
+    prop: type;
+}
+
+export interface I extends P {
+    prop: type;
+}
+
+export interface I extends Pick<T, props> {
+    prop: type;
+}
+
+export interface I extends Omit<T, props> {
+    props: type;
+}

@@ -1,0 +1,5 @@
+export type T = props;
+
+export type T = Pick<E, props>;
+
+export type T = Omit<E, props>;
