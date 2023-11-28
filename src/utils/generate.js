@@ -115,6 +115,4 @@ export const generate = async (schema, outDir, version) => {
             await generateAlias(key, als[key], path);
         }
     });
-
-    console.log('✨ Done');
 }
