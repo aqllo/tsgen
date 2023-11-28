@@ -8,3 +8,4 @@
 # local
 *.local.yaml
 *.d.ts
+.npmrc
