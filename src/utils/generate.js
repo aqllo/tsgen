@@ -10,10 +10,12 @@ export const buildProps = (props) => {
     const _props = [];
 
     for (const key in props) {
+        const optionalMark = props[key].optional ? '?': '';
+
         if (typeof props[key].type !== 'string' && props[key].type.length) {
-            _props.push(`\t${key}: ${joinProps(props[key].type)};`);
+            _props.push(`\t${key}${optionalMark}: ${joinProps(props[key].type)};`);
         } else {
-            _props.push(`\t${key}: ${props[key].type};`);
+            _props.push(`\t${key}${optionalMark}: ${props[key].type};`);
         }
     }
 
@@ -115,4 +117,6 @@ export const generate = async (schema, outDir, version) => {
             await generateAlias(key, als[key], path);
         }
     });
+
+    console.log('✨ Done');
 }
