@@ -1,6 +1,6 @@
 {
   "name": "@aqllo/tsgen",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Command line tool to generate TypeScript interfaces and type aliases from .yaml specification files",
   "main": "lib/cli/index.js",
   "type": "module",
