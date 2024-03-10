@@ -41,7 +41,7 @@ const Command = {
                 const res = await axios.get(f, {
                     ...(c && {
                         headers: {
-                            Authorization: `Basic ${Buffer.from(c).toString('base64')}`
+                            Authorization: `Bearer ${Buffer.from(c).toString()}`
                         }
                     })
                 });

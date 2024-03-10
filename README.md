@@ -107,7 +107,7 @@ Where:
 
 Options:
 
-> c: User Credentials (for GitHub access) - **Username:password**
+> c: User Credentials (for GitHub access) - **Github Access Token**
 
 > o: Output directory - **src** by default
 
