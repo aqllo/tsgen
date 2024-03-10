@@ -23,7 +23,7 @@ export const buildProps = (props) => {
 }
 
 export const generateInterface = async (name, content, path) => {
-    const filePath = `${process.cwd()}/src/templates/interfaces.txt`;
+    const filePath = `${process.cwd()}/node_modules/@aqllo/tsgen/src/templates/interfaces.txt`;
     const template = await fs.readFile(filePath, 'utf8');
     const { extends: ext, ...props } = content;
 
@@ -61,7 +61,7 @@ export const generateInterface = async (name, content, path) => {
 }
 
 export const generateAlias = async (name, content, path) => {
-    const filePath = `${process.cwd()}/src/templates/aliases.txt`;
+    const filePath = `${process.cwd()}/node_modules/@aqllo/tsgen/src/templates/aliases.txt`;
     const template = await fs.readFile(filePath, 'utf8');
     const { interface: ext, type } = content;
 
