@@ -32,7 +32,7 @@ export const generateInterface = async (name, content, path) => {
 
         if (pick) {
             const itfTmp = template.split('\n').slice(8, 9);
-            const def = itfTmp[0].replace('I', toPascal(name)).replace('T', toPascal(itf)).replace('props', joinProps(pick));
+            const def = itfTmp[0].replace('I', toPascal(name)).replace('INTERFACE', toPascal(itf)).replace('props', joinProps(pick));
 
             await fs.appendFile(path, ['\n', def, ...buildProps(props), '}'].join('\n'));
             return;
@@ -40,14 +40,14 @@ export const generateInterface = async (name, content, path) => {
 
         if (omit) {
             const itfTmp = template.split('\n').slice(12, 13);
-            const def = itfTmp[0].replace('I', toPascal(name)).replace('T', toPascal(itf)).replace('props', joinProps(omit));
+            const def = itfTmp[0].replace('I', toPascal(name)).replace('INTERFACE', toPascal(itf)).replace('props', joinProps(omit));
 
             await fs.appendFile(path, ['\n', def, ...buildProps(props), '}'].join('\n'));
             return;
         }
 
         const itfTmp = template.split('\n').slice(4, 5);
-        const def = itfTmp[0].replace('I', toPascal(name)).replace('T', toPascal(itf));
+        const def = itfTmp[0].replace('I', toPascal(name)).replace('INTERFACE', toPascal(itf));
 
         await fs.appendFile(path, ['\n', def, ...buildProps(props), '}'].join('\n'));
         return;
@@ -70,7 +70,7 @@ export const generateAlias = async (name, content, path) => {
 
         if (pick) {
             const itfTmp = template.split('\n').slice(2, 3);
-            const def = itfTmp[0].replace('T', toPascal(name)).replace('E', toPascal(itfName)).replace('props', joinProps(pick));
+            const def = itfTmp[0].replace('T', toPascal(name)).replace('INTERFACE', toPascal(itfName)).replace('props', joinProps(pick));
 
             await fs.appendFile(path, ['\n', def].join('\n'));
             return;
@@ -78,7 +78,7 @@ export const generateAlias = async (name, content, path) => {
 
         if (omit) {
             const itfTmp = template.split('\n').slice(4, 5);
-            const def = itfTmp[0].replace('T', toPascal(name)).replace('E', toPascal(itfName)).replace('props', joinProps(omit));
+            const def = itfTmp[0].replace('T', toPascal(name)).replace('INTERFACE', toPascal(itfName)).replace('props', joinProps(omit));
 
             await fs.appendFile(path, ['\n', def].join('\n'));
             return;

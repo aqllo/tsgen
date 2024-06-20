@@ -2,14 +2,14 @@ export interface I {
     prop: type;
 }
 
-export interface I extends P {
+export interface I extends INTERFACE {
     prop: type;
 }
 
-export interface I extends Pick<T, props> {
+export interface I extends Pick<INTERFACE, props> {
     prop: type;
 }
 
-export interface I extends Omit<T, props> {
+export interface I extends Omit<INTERFACE, props> {
     props: type;
 }
